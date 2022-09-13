@@ -37,7 +37,7 @@ const myReducer = createSlice({
     reducers: {
 
         filterByName: (state, action) => {
-            state.condition = state.products.filter((arrow) => arrow.type === action.payload);
+            state.condition = state.condition.filter((arrow) => arrow.type === action.payload);
 
             // console.log(name)
         },
@@ -51,7 +51,7 @@ const myReducer = createSlice({
 
             //     state.condition = state.condition.filter((arrow) => arrow.size === action.payload);
             // }
-            state.condition = state.products.filter((item) => item.size === action.payload);
+            state.condition = state.condition.filter((item) => item.size === action.payload);
 
         },
 
