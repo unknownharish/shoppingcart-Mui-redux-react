@@ -3,17 +3,26 @@ import { createSlice, current } from '@reduxjs/toolkit'
 let initstate = {
 
     products: [
-        { image: 'https://ugosports.co.uk/wp-content/uploads/2021/01/Adidas-hoodie-mens-grey.jpg', name: 'ugosports', color: 'black', stock: 'in stock', price: 30, qty: 10, size: 'M', type: 'hoodie' },
-        { image: 'https://cdn.cliqueinc.com/posts/275162/best-brown-leather-pants-275162-1576277836380-main.1080x0c.jpg?interlace=true&quality=70', name: 'leather-pants', color: 'black', stock: 'in stock', price: 30, qty: 15, size: 'L', type: 'pant' },
-        { image: 'https://n4.sdlcdn.com/imgs/i/k/d/Indian-Terrain-100-Percent-Cotton-SDL317035510-1-e3777.jpg', name: 'Cotton T-shirt', color: 'black', stock: 'in stock', price: 30, qty: 15, size: 'S', type: 'T-shirt' },
-        { image: 'https://www.hiboox.com/wp-content/uploads/2020/10/red-shirt.jpg', name: 'Wardobe', color: 'mehroon', stock: 'in stock', price: 150, qty: 15, size: 'M', type: 'T-shirt' },
-        { image: 'https://www.nielsenanimal.com/wp-content/uploads/2018/09/mens-nike-jd12-t-shirt-red-t-shirts.jpg', name: 'mens-nike-jd12-t-shirt', color: 'red', stock: 'in stock', price: 200, qty: 15, size: 'L', type: 'T-shirt' },
-        { image: 'https://s3-eu-west-1.amazonaws.com/images.linnlive.com/4026ef0cc7c4844b9d335306aa30fe5c/b7699336-c9fd-4d9c-8724-fb7e4daa7f06.jpg', name: 'Raiders', color: 'black', stock: 'in stock', price: 140, qty: 15, size: 'L', type: 'hoodie' },
-        { image: 'https://waliicorners.com/wp-content/uploads/2019/11/SingleRoad-Streetwear-Hoodies-Men-2019-Patchwork-Hoodies-Hip-Hop-Pullover-Mens-Fashion-Male-Tops-Hoodie-Men.jpg', name: 'SingleRoad', color: 'yellow', stock: 'in stock', price: 250, qty: 15, size: 'M', type: 'hoodie' },
-        { image: 'https://cdnc.lystit.com/photos/2012/04/14/carhartt-green-carhartt-aviation-pant-product-1-3252414-997321064.jpeg', name: 'carhartt-green', color: 'grey', stock: 'in stock', price: 180, qty: 15, size: 'M', type: 'pant' },
-        { image: 'https://content.backcountry.com/images/items/1200/MAM/MAMU53L/MAR_D2.jpg', name: 'Mamut-skytree', color: 'blue', stock: 'in stock', price: 160, qty: 15, size: 'S', type: 'pant' },
+        { image: 'https://ugosports.co.uk/wp-content/uploads/2021/01/Adidas-hoodie-mens-grey.jpg', name: 'ugosports', color: 'black', stock: 'in stock', price: 30, qty: 1, size: 'M', type: 'hoodie' },
+        { image: 'https://cdn.cliqueinc.com/posts/275162/best-brown-leather-pants-275162-1576277836380-main.1080x0c.jpg?interlace=true&quality=70', name: 'leather-pants', color: 'black', stock: 'in stock', price: 30, qty: 1, size: 'L', type: 'pant' },
+        { image: 'https://n4.sdlcdn.com/imgs/i/k/d/Indian-Terrain-100-Percent-Cotton-SDL317035510-1-e3777.jpg', name: 'Cotton T-shirt', color: 'black', stock: 'in stock', price: 30, qty: 1, size: 'S', type: 'T-shirt' },
+        { image: 'https://www.hiboox.com/wp-content/uploads/2020/10/red-shirt.jpg', name: 'Wardobe', color: 'mehroon', stock: 'in stock', price: 150, qty: 1, size: 'M', type: 'T-shirt' },
+        { image: 'https://www.nielsenanimal.com/wp-content/uploads/2018/09/mens-nike-jd12-t-shirt-red-t-shirts.jpg', name: 'mens-nike-jd12-t-shirt', color: 'red', stock: 'in stock', price: 200, qty: 1, size: 'L', type: 'T-shirt' },
+        { image: 'https://s3-eu-west-1.amazonaws.com/images.linnlive.com/4026ef0cc7c4844b9d335306aa30fe5c/b7699336-c9fd-4d9c-8724-fb7e4daa7f06.jpg', name: 'Raiders', color: 'black', stock: 'in stock', price: 140, qty: 1, size: 'L', type: 'hoodie' },
+        { image: 'https://waliicorners.com/wp-content/uploads/2019/11/SingleRoad-Streetwear-Hoodies-Men-2019-Patchwork-Hoodies-Hip-Hop-Pullover-Mens-Fashion-Male-Tops-Hoodie-Men.jpg', name: 'SingleRoad', color: 'yellow', stock: 'in stock', price: 250, qty: 1, size: 'M', type: 'hoodie' },
+        { image: 'https://cdnc.lystit.com/photos/2012/04/14/carhartt-green-carhartt-aviation-pant-product-1-3252414-997321064.jpeg', name: 'carhartt-green', color: 'grey', stock: 'in stock', price: 180, qty: 1, size: 'M', type: 'pant' },
+        { image: 'https://content.backcountry.com/images/items/1200/MAM/MAMU53L/MAR_D2.jpg', name: 'Mamut-skytree', color: 'blue', stock: 'in stock', price: 160, qty: 1, size: 'S', type: 'pant' },
     ],
     condition: [
+        { image: 'https://ugosports.co.uk/wp-content/uploads/2021/01/Adidas-hoodie-mens-grey.jpg', name: 'ugosports', color: 'black', stock: 'in stock', price: 30, qty: 1, size: 'M', type: 'hoodie' },
+        { image: 'https://cdn.cliqueinc.com/posts/275162/best-brown-leather-pants-275162-1576277836380-main.1080x0c.jpg?interlace=true&quality=70', name: 'leather-pants', color: 'black', stock: 'in stock', price: 30, qty: 1, size: 'L', type: 'pant' },
+        { image: 'https://n4.sdlcdn.com/imgs/i/k/d/Indian-Terrain-100-Percent-Cotton-SDL317035510-1-e3777.jpg', name: 'Cotton T-shirt', color: 'black', stock: 'in stock', price: 30, qty: 1, size: 'S', type: 'T-shirt' },
+        { image: 'https://www.hiboox.com/wp-content/uploads/2020/10/red-shirt.jpg', name: 'Wardobe', color: 'mehroon', stock: 'in stock', price: 150, qty: 1, size: 'M', type: 'T-shirt' },
+        { image: 'https://www.nielsenanimal.com/wp-content/uploads/2018/09/mens-nike-jd12-t-shirt-red-t-shirts.jpg', name: 'mens-nike-jd12-t-shirt', color: 'red', stock: 'in stock', price: 200, qty: 1, size: 'L', type: 'T-shirt' },
+        { image: 'https://s3-eu-west-1.amazonaws.com/images.linnlive.com/4026ef0cc7c4844b9d335306aa30fe5c/b7699336-c9fd-4d9c-8724-fb7e4daa7f06.jpg', name: 'Raiders', color: 'black', stock: 'in stock', price: 140, qty: 1, size: 'L', type: 'hoodie' },
+        { image: 'https://waliicorners.com/wp-content/uploads/2019/11/SingleRoad-Streetwear-Hoodies-Men-2019-Patchwork-Hoodies-Hip-Hop-Pullover-Mens-Fashion-Male-Tops-Hoodie-Men.jpg', name: 'SingleRoad', color: 'yellow', stock: 'in stock', price: 250, qty: 1, size: 'M', type: 'hoodie' },
+        { image: 'https://cdnc.lystit.com/photos/2012/04/14/carhartt-green-carhartt-aviation-pant-product-1-3252414-997321064.jpeg', name: 'carhartt-green', color: 'grey', stock: 'in stock', price: 180, qty: 1, size: 'M', type: 'pant' },
+        { image: 'https://content.backcountry.com/images/items/1200/MAM/MAMU53L/MAR_D2.jpg', name: 'Mamut-skytree', color: 'blue', stock: 'in stock', price: 160, qty: 1, size: 'S', type: 'pant' },
     ],
 
     mycart: [],
@@ -29,6 +38,7 @@ const myReducer = createSlice({
 
         filterByName: (state, action) => {
             state.condition = state.products.filter((arrow) => arrow.type === action.payload);
+
             // console.log(name)
         },
 
@@ -48,7 +58,7 @@ const myReducer = createSlice({
         filterByKeyword: (state, action) => {
 
             // state.condition = state.products.filter((arrow) => arrow.size === action.payload);
-            let newc = state.products.filter((arrow) => {
+            let newc = state.condition.filter((arrow) => {
 
 
                 let searchstr = action.payload.toLowerCase();
@@ -60,6 +70,7 @@ const myReducer = createSlice({
 
             });
 
+            // console.log(newc)
             state.condition = newc
 
         },
@@ -75,7 +86,7 @@ const myReducer = createSlice({
 
 
                     if (item.name == action.payload.name) {
-                        item.qty = action.payload.qty     //adjust qty
+                        item.qty = parseInt(action.payload.qty)    //adjust qty
                         totalPrice += item.qty * item.price
                         return item                       // add to cart
                     }
@@ -107,7 +118,20 @@ const myReducer = createSlice({
         },
 
         reset: (state, action) => {
-            state = initstate
+            state.condition = [
+                { image: 'https://ugosports.co.uk/wp-content/uploads/2021/01/Adidas-hoodie-mens-grey.jpg', name: 'ugosports', color: 'black', stock: 'in stock', price: 30, qty: 1, size: 'M', type: 'hoodie' },
+                { image: 'https://cdn.cliqueinc.com/posts/275162/best-brown-leather-pants-275162-1576277836380-main.1080x0c.jpg?interlace=true&quality=70', name: 'leather-pants', color: 'black', stock: 'in stock', price: 30, qty: 1, size: 'L', type: 'pant' },
+                { image: 'https://n4.sdlcdn.com/imgs/i/k/d/Indian-Terrain-100-Percent-Cotton-SDL317035510-1-e3777.jpg', name: 'Cotton T-shirt', color: 'black', stock: 'in stock', price: 30, qty: 1, size: 'S', type: 'T-shirt' },
+                { image: 'https://www.hiboox.com/wp-content/uploads/2020/10/red-shirt.jpg', name: 'Wardobe', color: 'mehroon', stock: 'in stock', price: 150, qty: 1, size: 'M', type: 'T-shirt' },
+                { image: 'https://www.nielsenanimal.com/wp-content/uploads/2018/09/mens-nike-jd12-t-shirt-red-t-shirts.jpg', name: 'mens-nike-jd12-t-shirt', color: 'red', stock: 'in stock', price: 200, qty: 1, size: 'L', type: 'T-shirt' },
+                { image: 'https://s3-eu-west-1.amazonaws.com/images.linnlive.com/4026ef0cc7c4844b9d335306aa30fe5c/b7699336-c9fd-4d9c-8724-fb7e4daa7f06.jpg', name: 'Raiders', color: 'black', stock: 'in stock', price: 140, qty: 1, size: 'L', type: 'hoodie' },
+                { image: 'https://waliicorners.com/wp-content/uploads/2019/11/SingleRoad-Streetwear-Hoodies-Men-2019-Patchwork-Hoodies-Hip-Hop-Pullover-Mens-Fashion-Male-Tops-Hoodie-Men.jpg', name: 'SingleRoad', color: 'yellow', stock: 'in stock', price: 250, qty: 1, size: 'M', type: 'hoodie' },
+                { image: 'https://cdnc.lystit.com/photos/2012/04/14/carhartt-green-carhartt-aviation-pant-product-1-3252414-997321064.jpeg', name: 'carhartt-green', color: 'grey', stock: 'in stock', price: 180, qty: 1, size: 'M', type: 'pant' },
+                { image: 'https://content.backcountry.com/images/items/1200/MAM/MAMU53L/MAR_D2.jpg', name: 'Mamut-skytree', color: 'blue', stock: 'in stock', price: 160, qty: 1, size: 'S', type: 'pant' },
+            ];
+
+            state.price = 0;
+            // state.mycart = [];
         }
     },
 })

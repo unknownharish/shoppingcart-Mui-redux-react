@@ -9,7 +9,9 @@ export default function MainTableElement({ row }) {
 
     const dispatch = useDispatch()
     const [added, setadded] = useState(true)
-    const [qty, setqty] = useState(1)
+    const [qty, setqty] = useState(row.qty)
+
+    console.log(row)
 
 
     function handleCart() {

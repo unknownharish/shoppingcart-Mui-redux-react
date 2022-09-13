@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { filterByName, filterBySize, filterByKeyword } from '../REDUX/actionSlice'
+import { filterByName, filterBySize, filterByKeyword ,reset} from '../REDUX/actionSlice'
 
 import { RotateLeft } from '@mui/icons-material';
 import { Box, Button, Container, FormControl, InputLabel, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
@@ -46,7 +46,7 @@ export default function Maincart() {
         setsize('');
         setsearch('');
 
-        // dispatch(reset())
+        dispatch(reset())
     };
 
     // console.log(Items)
@@ -105,7 +105,7 @@ export default function Maincart() {
                         </FormControl>
                     </Box>
 
-                    <Button variant='text' startIcon={<RotateLeft />} onClick={() => resetState()}> reset</Button>
+                    <Button variant='text' startIcon={<RotateLeft />} onClick={() => resetState()}> reset</Button> 
 
                 </Box>
                 <Box >
@@ -135,7 +135,8 @@ export default function Maincart() {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {Items.mystore.condition.length > 0 ? Items.mystore.condition.map((row, idx) => <MainTableElement key={idx} row={row} />) : Items.mystore.products.map((row, idx) => <MainTableElement key={idx} row={row} />)}
+                            {/* {Items.mystore.condition.length > 0 ? Items.mystore.condition.map((row, idx) => <MainTableElement key={idx} row={row} />) : Items.mystore.products.map((row, idx) => <MainTableElement key={idx} row={row} />)} */}
+                            {Items.mystore.condition.map((row, idx) => <MainTableElement key={idx} row={row} />) }
                         </TableBody>
                     </Table>
                 </TableContainer>
